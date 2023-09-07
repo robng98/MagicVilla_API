@@ -47,8 +47,8 @@ namespace MagicVilla_VillaAPI.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Occupancy")
                         .HasColumnType("int");
@@ -64,14 +64,14 @@ namespace MagicVilla_VillaAPI.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Villas", (string)null);
+                    b.ToTable("Villas");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 9, 7, 12, 36, 5, 428, DateTimeKind.Local).AddTicks(2088),
+                            CreatedDate = new DateTime(2023, 9, 7, 17, 29, 52, 262, DateTimeKind.Local).AddTicks(660),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa3.jpg",
                             Name = "Royal Villa",
@@ -84,7 +84,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 2,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 9, 7, 12, 36, 5, 428, DateTimeKind.Local).AddTicks(2101),
+                            CreatedDate = new DateTime(2023, 9, 7, 17, 29, 52, 262, DateTimeKind.Local).AddTicks(671),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa1.jpg",
                             Name = "Premium Pool Villa",
@@ -97,7 +97,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 3,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 9, 7, 12, 36, 5, 428, DateTimeKind.Local).AddTicks(2103),
+                            CreatedDate = new DateTime(2023, 9, 7, 17, 29, 52, 262, DateTimeKind.Local).AddTicks(674),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa4.jpg",
                             Name = "Luxury Pool Villa",
@@ -110,7 +110,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 4,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 9, 7, 12, 36, 5, 428, DateTimeKind.Local).AddTicks(2104),
+                            CreatedDate = new DateTime(2023, 9, 7, 17, 29, 52, 262, DateTimeKind.Local).AddTicks(677),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa5.jpg",
                             Name = "Diamond Villa",
@@ -123,7 +123,7 @@ namespace MagicVilla_VillaAPI.Migrations
                         {
                             Id = 5,
                             Amenity = "",
-                            CreatedDate = new DateTime(2023, 9, 7, 12, 36, 5, 428, DateTimeKind.Local).AddTicks(2106),
+                            CreatedDate = new DateTime(2023, 9, 7, 17, 29, 52, 262, DateTimeKind.Local).AddTicks(680),
                             Details = "Fusce 11 tincidunt maximus leo, sed scelerisque massa auctor sit amet. Donec ex mauris, hendrerit quis nibh ac, efficitur fringilla enim.",
                             ImageUrl = "https://dotnetmasteryimages.blob.core.windows.net/bluevillaimages/villa2.jpg",
                             Name = "Diamond Pool Villa",
