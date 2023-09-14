@@ -21,7 +21,10 @@ namespace MagicVilla_VillaAPI.Controllers
         }
 
         [HttpGet]
+        [ResponseCache(CacheProfileName = "Default30")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         public ActionResult<IEnumerable<VillaDTO>> GetVillas()
         {
             _logger.LogInformation("Getting all villas");
@@ -29,6 +32,7 @@ namespace MagicVilla_VillaAPI.Controllers
         }
 
         [HttpGet("{id:int}", Name = "GetVilla")]
+        [ResponseCache(CacheProfileName = "Default30")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

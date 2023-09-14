@@ -10,8 +10,14 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConnection"));
 });
+builder.Services.AddResponseCaching();
 builder.Services.AddControllers(option =>
 {
+    option.CacheProfiles.Add("Default30",
+            new CacheProfile
+            {
+                Duration = 30
+            });
     //option.ReturnHttpNotAcceptable = true;
 })
     .AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
@@ -20,7 +26,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddApiVersioning(options =>
 {
-    options.AssumeDefaultVersionWhenUnspecified =true;
+    options.AssumeDefaultVersionWhenUnspecified = true;
     options.DefaultApiVersion = new ApiVersion(1, 0);
 });
 
